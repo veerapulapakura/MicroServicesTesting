@@ -15,5 +15,8 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+    useJUnitPlatform{
+        includeTags("cat1")
+        excludeTags("cat2")
+    }
 }
