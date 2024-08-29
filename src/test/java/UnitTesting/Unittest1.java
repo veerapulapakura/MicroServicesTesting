@@ -1,10 +1,11 @@
 package UnitTesting;
 
+import Learning.DemoData;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class Unittest1 {
-    
+    DemoData demodata = new DemoData();
     @Test
     void StringCompare(){
         String ExpectedName ="Veera";
@@ -21,5 +22,11 @@ public class Unittest1 {
         System.out.println("Tast 2 completed");
     }
 
-
+    @Test()
+    void NumbersCompare(){
+        int Expectednumber =30100;
+        int ExpectedNumber =demodata.PeopleCount(30000);
+        assertEquals(Expectednumber,ExpectedNumber);
+        System.out.println("Test for int comparision completed");
+    }
 }
